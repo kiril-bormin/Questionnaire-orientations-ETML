@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Liste des questions</title>
+  </head>
+  <body>
+    <h1>Liste des questions</h1>
+
+    <ul>
+      @each(question in questions)
+        <li>
+          {{ question.enonce }}
+        </li>
+      @endeach
+    </ul>
+  </body>
+</html>
