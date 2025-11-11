@@ -1,4 +1,4 @@
-import Question from '#models/question'
+import Question from '#models/t_question_etudiants'
 import type { HttpContext } from '@adonisjs/core/http'
 
 export default class QuestionsController {
@@ -11,8 +11,6 @@ export default class QuestionsController {
     const questions = await Question.all()
 
      return view.render('toto', { questions })
-
-
   }
 
   /**

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Questionnaire ETML</title>
+    <link rel="stylesheet" href="/resources/css/app.css">
+  </head>
+  <body>
+    <main class="container">
+      <header class="header">
+        <section class="logo-section">
+          <img src="https://www.etml.ch/themes/etml/assets/images/etml_logo_complet.svg" alt="ETML Logo" class="logo"/>
+          <p class="school-info">
+          </p>
+        </section>
+        <h1 class="title">Questionnaire</h1>
+      </header>
+      <section class="content">
+        <h2 class="subtitle">Je suis un/une...</h2>
+        <div class="buttons">
+          <form method="post" action="/">
+            {{ csrfField() }}
+            <button class="btn">
+              Visiteur/ese des<br/>portes ouvertes
+            </button>
+            <button class="btn">
+              Apprenti/e en 1<sup>ère</sup><br/>année en<br/>Informatique
+            </button>
+          </form>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

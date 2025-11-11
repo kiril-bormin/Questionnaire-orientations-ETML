@@ -1,3 +1,4 @@
+
 * {
   margin: 0;
   padding: 0;
@@ -8,3 +9,105 @@ body {
   height: 100%;
   width: 100%;
 }
+/* Body et fond */
+body {
+  background-color: #0000b4;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+/* Conteneur principal */
+.container {
+  background-color: #f9f9f8;
+  border-radius: 2rem;
+  width: 90vw;
+  max-width: 1200px;
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  padding: 3rem;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  overflow: hidden;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.logo-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  height: 48px;
+  margin-bottom: 0.5rem;
+}
+
+.school-info {
+  font-size: 0.75rem;
+  color: #21201c;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: black;
+  padding-top: 1rem;
+}
+
+/* Section principale */
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  text-align: center;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: black;
+  margin: 2.5rem 0 2rem 0;
+}
+
+/* Boutons */
+.buttons {
+  display: flex;
+  gap: 4rem;
+  margin-bottom: 3rem;
+}
+
+.btn {
+  background-color: #0000b4;
+  color: white;
+  border-radius: 60px;
+  width: 340px;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  font-weight: 400;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  transition: all 0.2s ease-in-out;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
