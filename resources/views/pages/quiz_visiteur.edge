@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question {{ question.id }}</title>
+    <link rel="icon" href="https://www.etml.ch/themes/etml/assets/images/etml_favicon_v3.ico">
+    <link rel="stylesheet" href="/resources/css/app.css">
+</head>
+<body>
+  
+  <h1>Question n°{{ question.id }}</h1>
+
+  <p class="question-text">
+    {{ question.question }}
+  </p>
+
+  <form method="POST" action="/visiteur/question/{{ question.id }}">
+    {{ csrfField() }}
+
+    <button type="submit" name="reponse" value="A" class="btn-option">
+      {{ question.optionAText }}
+    </button>
+
+    <button type="submit" name="reponse" value="B" class="btn-option">
+      {{ question.optionBText }}
+    </button>
+
+  </form>
+
+</body>
+</html>

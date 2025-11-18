@@ -1,113 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Shippori+Antique&display=swap');
 
-* {
+html {
+  font-family: "Shippori Antique", sans-serif;
+  background-color: #0000AC;
+  padding-left: 90px;
+  padding-right: 90px;
+  padding-bottom: 100px;
   margin: 0;
-  padding: 0;
-}
+  user-select: none;
 
-html,
-body {
-  height: 100%;
-  width: 100%;
-}
-/* Body et fond */
-body {
-  background-color: #0000b4;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0;
-  font-family: sans-serif;
-}
-
-/* Conteneur principal */
-.container {
-  background-color: #f9f9f8;
-  border-radius: 2rem;
-  width: 90vw;
-  max-width: 1200px;
-  min-height: 90vh;
-  display: flex;
-  flex-direction: column;
-  padding: 3rem;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
   overflow: hidden;
+  -webkit-user-select: none;
+  -moz-user-select: none;
 }
 
-/* Header */
-.header {
+body {
+  height: 90vh;
+  background-color: #F3EFED;
+  margin: 0;
+  border-bottom-left-radius: 93px;
+  border-bottom-right-radius: 93px;
+}
+
+header {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
-  align-items: flex-start;
+  padding: 10px;
+  padding-left: 50px;
+  padding-right: 50px;
 }
 
-.logo-section {
-  display: flex;
-  flex-direction: column;
+header img {
+  width: 420px;
 }
 
-.logo {
-  height: 48px;
-  margin-bottom: 0.5rem;
-}
+header h1 {
 
-.school-info {
-  font-size: 0.75rem;
-  color: #21201c;
-  font-weight: 500;
-  line-height: 1.2;
-}
-
-.title {
-  font-size: 1.5rem;
   font-weight: 400;
-  color: black;
-  padding-top: 1rem;
+  font-size: 50px;
+  font-style: normal;
 }
 
-/* Section principale */
-.content {
+main {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  flex: 1;
+  align-content: center;
   text-align: center;
 }
 
-.subtitle {
-  font-size: 1.5rem;
-  font-weight: 400;
-  color: black;
-  margin: 2.5rem 0 2rem 0;
+form {
+  width: 1000px;
+  align-items: top;
+  align-self: center;
+  justify-content: center;
 }
 
-/* Boutons */
-.buttons {
+input {
+  width: 470px;
+  height: 200px;
+  padding-left: 48px;
+  border: 0;
+  background-color: #D9D9D9;
+  border-radius: 2px;
+  font-size: 24px;
+  color: #6b6b6b;
+  outline: none;
+  box-shadow: none;
+  vertical-align: middle;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+input::placeholder {
+  color: #9a9a9a
+}
+
+section {
+  align-self: center;
+  width: 1000px;
+
+}
+
+.variants {
   display: flex;
-  gap: 4rem;
-  margin-bottom: 3rem;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 100px;
+  padding: 20px;
+  align-items: center;
 }
 
-.btn {
-  background-color: #0000b4;
+.button-big {
   color: white;
-  border-radius: 60px;
-  width: 340px;
-  height: 300px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.25rem;
-  font-weight: 400;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-  transition: all 0.2s ease-in-out;
-  border: none;
-  cursor: pointer;
-  text-align: center;
+  background-color: #0000AC;
+  height: 450px;
+  width: 450px;
+  border-radius: 77px;
+  font-size: 50px;
 }
 
-.btn:hover {
+.button-small {
+  color: white;
+  background-color: #0000AC;
+  height: 246px;
+  width: 450px;
+  border-radius: 77px;
+  font-size: 50px;
+}
+
+button:hover {
   transform: scale(1.05);
+  transition: transform 0.2s ease-in-out;
 }
 
+form.variants {
+  align-items: center;
+  align-self: center;
+}

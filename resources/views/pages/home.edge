@@ -1,40 +1,32 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Questionnaire ETML</title>
-  <link rel="stylesheet" href="/resources/css/app.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil</title>
+    <link rel="icon" href="https://www.etml.ch/themes/etml/assets/images/etml_favicon_v3.ico">
+    <link rel="stylesheet" href="/resources/css/app.css">
 </head>
 <body>
-
-  <main class="container">
-
-    <header class="header">
-      <section class="logo-section">
-        <img src="https://www.etml.ch/fileadmin/templates/images/logo-etml.svg" alt="ETML Logo" class="logo"/>
-        <p class="school-info">
-          Ecole technique<br/>
-          Ecole des métiers<br/>
-          Lausanne
-        </p>
-      </section>
-      <h1 class="title">Questionnaire</h1>
+    <header>
+        <img src="https://www.etml.ch/themes/etml/assets/images/etml_logo_complet.svg" draggable="false">
+        <h1>Questionnaire</h1>
     </header>
-
-    <section class="content">
-      <h2 class="subtitle">Entrez votre nom ...</h2>
-      <div>
-        <form method="post" action="/">
+    <main>
+        <h1>Entrez votre nom</h1>
+		<form method="post" action="/">
           {{ csrfField() }}
-          <input type="text" name="prenom">
-          <input type="submit" value="enregistrer">
+          <input type="text" placeholder="Écrivez-ici..." name="prenom">
+        
         </form>
-      </div>
-    </section>
-  </main>
 
+    </main>
+    <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('contextmenu', function(e) {
+      e.preventDefault();
+    });
+  });
+</script>
 </body>
 </html>
-

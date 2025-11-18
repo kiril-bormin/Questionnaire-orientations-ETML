@@ -6,7 +6,7 @@ export default class TParticipants extends BaseModel {
   declare id: number
 
   @column({ columnName: 'name' })
-  declare name: string
+  declare prenom: string
 
   @column({ columnName: 'questionnaire_type' })
   declare questionnaireType: boolean | null

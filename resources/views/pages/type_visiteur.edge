@@ -1,35 +1,39 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Questionnaire ETML</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil</title>
+    <link rel="icon" href="https://www.etml.ch/themes/etml/assets/images/etml_favicon_v3.ico">
     <link rel="stylesheet" href="/resources/css/app.css">
-  </head>
-  <body>
-    <main class="container">
-      <header class="header">
-        <section class="logo-section">
-          <img src="https://www.etml.ch/themes/etml/assets/images/etml_logo_complet.svg" alt="ETML Logo" class="logo"/>
-          <p class="school-info">
-          </p>
-        </section>
-        <h1 class="title">Questionnaire</h1>
-      </header>
-      <section class="content">
-        <h2 class="subtitle">Je suis un/une...</h2>
-        <div class="buttons">
-          <form method="post" action="/">
+</head>
+<body>
+    <header>
+        <img src="https://www.etml.ch/themes/etml/assets/images/etml_logo_complet.svg" draggable="false">
+        <h1>Questionnaire</h1>
+    </header>
+    <main>
+       <section>
+        <h1>Je suis un/une</h1>
+       
+      <form method="post" action="/choix-type">
             {{ csrfField() }}
-            <button class="btn">
+            <button type="submit" name="type" class="button-big" value="portes-ouvertes">
               Visiteur/ese des<br/>portes ouvertes
             </button>
-            <button class="btn">
+            <button type="submit" name="type" class="button-big" value="etudiant">
               Apprenti/e en 1<sup>ère</sup><br/>année en<br/>Informatique
             </button>
           </form>
-        </div>
-      </section>
+       
+  </section>
     </main>
-  </body>
+    <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('contextmenu', function(e) {
+      e.preventDefault();
+    });
+  });
+</script>
+</body>
 </html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question {{ question.id }}</title>
+    <link rel="icon" href="https://www.etml.ch/themes/etml/assets/images/etml_favicon_v3.ico">
+    <link rel="stylesheet" href="/resources/css/app.css">
+</head>
+<body>
+  
+  <h1>Question n°{{ question.id }} (Parcours Étudiant)</h1>
+
+  <p class="question-text">
+    {{ question.question }}
+  </p>
+
+  <form method="POST" action="/etudiant/question/{{ question.id }}">
+    {{ csrfField() }}
+
+    <button type="submit" name="reponse" value="1" class="btn-option">
+      {{ question.reponse1Text }}
+    </button>
+
+    @if(question.reponse2Text)
+    <button type="submit" name="reponse" value="2" class="btn-option">
+      {{ question.reponse2Text }}
+    </button>
+    @endif
+
+    @if(question.reponse3Text)
+    <button type="submit" name="reponse" value="3" class="btn-option">
+      {{ question.reponse3Text }}
+    </button>
+    @endif
+
+    @if(question.reponse4Text)
+    <button type="submit" name="reponse" value="4" class="btn-option">
+      {{ question.reponse4Text }}
+    </button>
+    @endif
+
+  </form>
+
+</body>
+</html>
