@@ -15,16 +15,15 @@
     <main>
        <section>
         <h1>Je suis un/une</h1>
-       
-      <form method="post" action="/choix-type">
-            {{ csrfField() }}
-            <button type="submit" name="type" class="button-big" value="portes-ouvertes">
-              Visiteur/ese des<br/>portes ouvertes
-            </button>
-            <button type="submit" name="type" class="button-big" value="etudiant">
-              Apprenti/e en 1<sup>ère</sup><br/>année en<br/>Informatique
-            </button>
-          </form>
+  <form method="post" action="/choix-type" class="variants">
+    {{ csrfField() }}
+    <button type="submit" name="type" class="button-big" value="portes-ouvertes">
+      Visiteur/ese des<br/>portes ouvertes
+    </button>
+    <button type="submit" name="type" class="button-big" value="etudiant">
+      Apprenti/e en 1<sup>ère</sup><br/>année en<br/>Informatique
+    </button>
+</form>
        
   </section>
     </main>

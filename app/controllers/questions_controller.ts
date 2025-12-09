@@ -1,4 +1,4 @@
-import Question from '#models/t_question_visiteurs'
+import Question from '#models/question_visiteur'
 import type { HttpContext } from '@adonisjs/core/http'
 
 export default class QuestionsController {

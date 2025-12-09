@@ -16,7 +16,7 @@
         <h1>Entrez votre nom</h1>
 		<form method="post" action="/">
           {{ csrfField() }}
-          <input type="text" placeholder="Écrivez-ici..." name="prenom">
+          <input type="text" placeholder="Écrivez-ici..." **autocomplete="off"** name="prenom">
         
         </form>
 

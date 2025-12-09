@@ -13,7 +13,9 @@ html {
   -webkit-user-select: none;
   -moz-user-select: none;
 }
-
+p{
+  font-size: 30px;
+}
 body {
   height: 90vh;
   background-color: #F3EFED;
@@ -51,10 +53,7 @@ main {
 }
 
 form {
-  width: 1000px;
-  align-items: top;
-  align-self: center;
-  justify-content: center;
+margin: 0 auto;
 }
 
 input {
@@ -84,12 +83,14 @@ section {
 }
 
 .variants {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  gap: 100px;
-  padding: 20px;
-  align-items: center;
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 30px;
+justify-content: center;
+align-items: center;
+padding: 20px;
+max-width: 1000px;
+margin: 0 auto;
 }
 
 .button-big {
@@ -98,24 +99,74 @@ section {
   height: 450px;
   width: 450px;
   border-radius: 77px;
-  font-size: 50px;
+  font-size: 40px;
+ 
+  border: none;
+  outline: none;
+  cursor: pointer;
 }
+ul {
+  padding: 20px;
+}
+ .result{
 
-.button-small {
-  color: white;
+ color: white;
   background-color: #0000AC;
-  height: 246px;
+  height: 450px;
   width: 450px;
   border-radius: 77px;
-  font-size: 50px;
+  font-size: 30px;
+ padding: 15px;
+  border: none;
+  outline: none;
+  cursor: pointer;
 }
+.result a{
+  text-decoration: none;
+} 
 
+a{
+    text-decoration: none;
+}
 button:hover {
   transform: scale(1.05);
   transition: transform 0.2s ease-in-out;
 }
 
+.button-small {
+color: white;
+ background-color: #0000AC;
+height: 246px;
+width: 100%;
+border-radius: 77px;
+font-size: 30px;
+border: none;
+outline: none;
+cursor: pointer;
+}
+
+li{
+  list-style-type: none;
+}
 form.variants {
   align-items: center;
   align-self: center;
 }
+.text-success { 
+        color: #2563eb; 
+    }
+
+    .text-warning { 
+        color: #ea580c; 
+    }
+
+    .text-info { 
+        color: #9333ea;
+    }
+
+    .filiere-title {
+      font-size: 2.5em;
+      margin: 20px 0;
+      font-weight: bold;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.1); 
+    }

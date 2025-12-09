@@ -23,12 +23,13 @@ router.post('/choix-type', [VisiteursController, 'choice_type'])
 router.get('questions', [QuestionsController, 'index'])
 
 // si visiteur
-router.get('/visiteur/question/:id', '#controllers/visiteurs_controller.showQuestionVisiteur')
-router.post('/visiteur/question/:id', '#controllers/visiteurs_controller.handleAnswerVisiteur')
+router.get('/visiteur/question/:id', [VisiteursController, 'showQuestionVisiteur'])
+router.post('/visiteur/question/:id', [VisiteursController, 'manageAnswerVisiteur'])
 // fin
-router.get('/resultats', '#controllers/visiteurs_controller.showResultsVisiteur')
-
+router.get('/resultats', [VisiteursController, 'showResultsVisiteur'])
 
 // si étudiant
-router.get('/etudiant/question/:id', '#controllers/visiteurs_controller.showQuestionEtudiant')
-router.post('/etudiant/question/:id', '#controllers/visiteurs_controller.handleAnswerEtudiant')
+router.get('/etudiant/question/:id', [VisiteursController, 'showQuestionStudent'])
+router.post('/etudiant/question/:id', [VisiteursController, 'manageAnswerStudent'])
+// fin
+router.get('/resultats-etudiant', [VisiteursController, 'showResultsStudent'])

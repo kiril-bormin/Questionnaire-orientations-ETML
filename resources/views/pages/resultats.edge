@@ -3,10 +3,42 @@
 <head>
   <meta charset="UTF-8">
   <title>Résultats</title>
+  <link rel="stylesheet" href="/resources/css/app.css">
 </head>
 <body>
-  <h1> Finish</h1>
-  
+  <header>
+ <img src="https://www.etml.ch/themes/etml/assets/images/etml_logo_complet.svg" draggable="false">
+      <h1>Résultats du Questionnaire</h1>
 
+  </header>
+  <main>
+    @if(participant)
+      <h2>Bravo, {{ participant.name }}!</h2> 
+      
+      <h3>Votre profil suggéré est :</h3>
+      <h1 class="result-title">{{ profil }}</h1> 
+
+      <p class="result-description">{{ description }}</p>
+
+      <hr>
+
+      <h4>Détails des scores :</h4>
+      <ul>
+        <li>
+          Score Développement (DEV) : <strong>{{ participant.scoreDev || 0 }}</strong>
+        </li>
+        <li>
+          Score Infrastructure (INFRA) : <strong>{{ participant.scoreInfra || 0 }}</strong>
+        </li>
+      </ul>
+      
+      <div class="actions">
+        <a href="/" class="result">Recommencer le test</a>
+      </div>
+    @else
+      <p>Aucun participant trouvé. Veuillez recommencer.</p>
+      <a href="/" class="result">Accueil</a>
+    @endif
+  </main>
 </body>
 </html>

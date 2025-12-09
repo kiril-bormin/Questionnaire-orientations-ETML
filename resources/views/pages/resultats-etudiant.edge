@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Résultats</title>
+  <link rel="stylesheet" href="/resources/css/app.css">
+
+</head>
+<body>
+  <header>
+    <img src="https://www.etml.ch/themes/etml/assets/images/etml_logo_complet.svg" draggable="false">
+      <h1>Résultats du Questionnaire</h1>
+    
+  </header>
+<main>
+    <div class="result-container">
+      
+      @if(participant)
+        <h2>Bravo, {{ participant.name }} ! </h2>
+        <p>D'après tes réponses techniques, voici la voie qui te correspond le mieux :</p>
+
+        <h1 class="filiere-title" style="color: {{ colorCode }}">
+          {{ filiere }}
+        </h1>
+
+        <p style="font-size: 1.2em; color: #555;">
+          {{ description }}
+        </p>
+
+        <hr style="margin: 30px 0;">
+
+        <div class="score-details">
+          <h4> Détail de tes affinités :</h4>
+          
+          <div class="score-item">
+            <span> Développement (Code) :</span>
+            <strong>{{ scoreDev }} points</strong>
+          </div>
+          
+          <div class="score-item">
+            <span> Infrastructure (Système) :</span>
+            <strong>{{ scoreInfra }} points</strong>
+          </div>
+        </div>
+
+        <div class="actions">
+              <br>
+          <br>
+          <a href="/" class="result">Retour à l'accueil</a>
+      
+        </div>
+
+      @else
+        <p>Oups, nous n'avons pas trouvé tes résultats.</p>
+        <a href="/" class="result">Recommencer</a>
+      @endif
+
+    </div>
+  </main>
+</body>
+</html>
