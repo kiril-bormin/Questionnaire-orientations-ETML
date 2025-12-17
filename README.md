@@ -2,6 +2,8 @@
 
 Ce projet permet de gérer le questionnaire d'orientation pour l'ETML. Il est construit avec **Node.js** et le framework **AdonisJS**.
 
+<img width="510" height="287" alt="image" src="https://github.com/user-attachments/assets/f6d971fd-aa59-432e-bbce-39a0ac09b7a3" />
+
 ##  Prérequis
 
 Les outils suivants sont requis pour fonctionner le programme :
